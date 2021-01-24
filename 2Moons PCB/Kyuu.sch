@@ -3238,7 +3238,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 6850 4350 6850
 $Comp
-L ESD_Protection:SRV05-4 U2
+L Kyuu-rescue:SRV05-4-ESD_Protection U2
 U 1 1 5FD0EDC3
 P 6650 8325
 F 0 "U2" H 6650 9006 50  0000 C CNN
@@ -3318,7 +3318,7 @@ Connection ~ 4500 9150
 Wire Wire Line
 	4500 9150 5500 9150
 $Comp
-L device:Polyfuse_Small F1
+L Kyuu-rescue:Polyfuse_Small-device F1
 U 1 1 60020D25
 P 5775 8750
 F 0 "F1" V 5570 8750 50  0000 C CNN
