@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\Zeus\Documents\GitHub\master-keyboards\Kyuu-main\PCB\Kyuu.sch</source>
-    <date>12/6/2020 11:44:47 PM</date>
-    <tool>Eeschema (5.1.8)-1</tool>
+    <source>C:\Users\ZEUS-NOTE\Documents\GitHub\Kyuu\2Moons PCB\Kyuu.sch</source>
+    <date>08/02/2021 15:15:24</date>
+    <tool>Eeschema (5.1.6)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -1584,7 +1584,7 @@
         <field name="Mfr">Yenji Elec</field>
         <field name="Part#">SRV05-4</field>
       </fields>
-      <libsource lib="ESD_Protection" part="SRV05-4" description="ESD Protection Diodes with Low Clamping Voltage, SOT-23-6"/>
+      <libsource lib="Kyuu-rescue" part="SRV05-4-ESD_Protection" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD0EDC3</tstamp>
     </comp>
@@ -1597,7 +1597,7 @@
         <field name="Mfr">TECHFUSE</field>
         <field name="Part#">nSMD025</field>
       </fields>
-      <libsource lib="device" part="Polyfuse_Small" description="resettable fuse, polymeric positive temperature coefficient (PPTC), small symbol"/>
+      <libsource lib="Kyuu-rescue" part="Polyfuse_Small-device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60020D25</tstamp>
     </comp>
@@ -1616,26 +1616,6 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="ESD_Protection" part="SRV05-4">
-      <description>ESD Protection Diodes with Low Clamping Voltage, SOT-23-6</description>
-      <docs>http://www.onsemi.com/pub/Collateral/SRV05-4-D.PDF</docs>
-      <footprints>
-        <fp>SOT?23?6*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">SRV05-4</field>
-        <field name="Footprint">TO_SOT_Packages_SMD:SOT-23-6</field>
-      </fields>
-      <pins>
-        <pin num="1" name="IO1" type="passive"/>
-        <pin num="2" name="VN" type="power_in"/>
-        <pin num="3" name="IO2" type="passive"/>
-        <pin num="4" name="IO3" type="passive"/>
-        <pin num="5" name="VP" type="power_in"/>
-        <pin num="6" name="IO4" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Kyuu-rescue" part="ATMEGA32U4">
       <fields>
         <field name="Reference">U</field>
@@ -1749,6 +1729,20 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Kyuu-rescue" part="Polyfuse_Small-device">
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse_Small-device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Kyuu-rescue" part="R_Small">
       <footprints>
         <fp>R_*</fp>
@@ -1760,6 +1754,24 @@
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Kyuu-rescue" part="SRV05-4-ESD_Protection">
+      <footprints>
+        <fp>SOT?23?6*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SRV05-4-ESD_Protection</field>
+        <field name="Footprint">TO_SOT_Packages_SMD:SOT-23-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IO1" type="passive"/>
+        <pin num="2" name="VN" type="power_in"/>
+        <pin num="3" name="IO2" type="passive"/>
+        <pin num="4" name="IO3" type="passive"/>
+        <pin num="5" name="VP" type="power_in"/>
+        <pin num="6" name="IO4" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Kyuu-rescue" part="SW_PUSH">
@@ -1783,31 +1795,10 @@
         <pin num="3" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="Polyfuse_Small">
-      <description>resettable fuse, polymeric positive temperature coefficient (PPTC), small symbol</description>
-      <footprints>
-        <fp>*polyfuse*</fp>
-        <fp>*PTC*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">F</field>
-        <field name="Value">Polyfuse_Small</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
   </libparts>
   <libraries>
-    <library logical="ESD_Protection">
-      <uri>C:/Users/Zeus/Documents/kicad-library-4.0.7/library/ESD_Protection.lib</uri>
-    </library>
     <library logical="Kyuu-rescue">
-      <uri>C:\Users\Zeus\Documents\GitHub\master-keyboards\Kyuu-main\PCB/Kyuu-rescue.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>C:/Users/Zeus/Documents/kicad-library-4.0.7/library/device.lib</uri>
+      <uri>C:\Users\ZEUS-NOTE\Documents\GitHub\Kyuu\2Moons PCB/Kyuu-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
